@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color-light: #FFFFFF;
+  --bg-color-dark: #121214;
+
+  --timer-color-light: #323238;
+  --timer-color-dark: #FFFFFF;
+
+  --cardBtn-color-light: #E1E1E6;
+  --cardBtn-color-selected-light: #02799D;
+  --cardSvg-color-selected-light: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(264deg) brightness(106%) contrast(101%);
+
+  --cardBtn-color-dark: #29292E;
+  --cardBtn-color-selected-dark: #0A3442;
+  --cardSvg-color-selected-dark: brightness(0) saturate(100%) invert(86%) sepia(7%) saturate(199%) hue-rotate(201deg) brightness(93%) contrast(86%);
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  font-size: 1.6rem;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  justify-items: center;
+  align-items: center;
+}
+
+.body-light-mode {
+  background-color: var(--bg-color-light);
+  transition: background .3s;
+}
+
+main {
+  display: flex;
+  gap: 19.2rem;
+  width: 82.1rem;
+  height: 33.6rem;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+#controler {
+  display: grid;
+  width: 32.1rem;
+  height: 21.3rem;
+  gap: 1.8rem;
+  justify-items: center;
+  align-items: center;
+}
+
+#timer {
+  color: var(--itens-primary-color-light);
+  display: flex;
+  font-weight: 500;
+  font-size: 12.6rem;
+  line-height: 148px;
+}
+
+#controls{
+  display: flex;
+  gap: 4rem;
+  color: var(--cardBtn-color-light);
+}
+
+#controls button{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#sounds {
+  max-width: 30.8rem;
+  height: 33.6rem;
+  display: grid;
+  grid-template-columns: 13.8rem 13.8rem;
+  gap: 3.2rem;
+}
+
+#sounds .card {
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+  border: none;
+  background: var(--cardBtn-color-light);
+  transition: background .3s;
+}
+
+#sounds button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  transition: background .3s;
+}
+
+#sounds button img {
+  cursor: pointer;
+}
+
+#sounds button input[type=range]{
+  -webkit-appearance: none;
+  width: 9rem;
+  height: .4rem;
+  border-radius: 5px;
+  background: var(--timer-color-light);
+  cursor: pointer;
+}
+
+#sounds button input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--timer-color-light);
+}
+
+
+#sounds button.clicked input[type=range]{
+  -webkit-appearance: none;
+  width: 9rem;
+  height: .4rem;
+  border-radius: 5px;
+  background: var(--timer-color-dark);
+}
+
+#sounds button.clicked input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--timer-color-dark);
+}
+
+#sounds button:hover {
+  background: #babac5
+}
+
+#sounds button.clicked,
+#sounds button.clicked svg path {
+  background-color: var(--cardBtn-color-selected-light);
+}
+
+#sounds button.clicked img {
+  filter: var(--cardSvg-color-selected-light);
+  transition: .3s;
+}
+
+.colorMode.light {
+  border: none;
+  background: none;
+  position: absolute;
+  z-index: 1;
+  top: 6.4rem;
+  right: 6.4rem;
+}
+
+.colorMode.dark {
+  border: none;
+  background: none;
+  position: absolute;
+  z-index: 1;
+  top: 6.4rem;
+  right: 6rem;
+}
+
+/* DARK MODE */
+
+.body-dark-mode {
+  background-color: var(--bg-color-dark);
+  transition: background .3s
+}
+
+#sounds button.card-dark-mode:hover {
+  background: #414146;
+}
+
+#sounds button.card-dark-mode {
+  background: var(--cardBtn-color-dark);
+}
+
+#sounds button.clicked.card-dark-mode {
+  background: var(--cardBtn-color-selected-dark);
+}
+
+#sounds button.card-dark-mode img {
+  filter: var(--cardSvg-color-selected-dark);
+}
+
+#sounds button.clicked.card-dark-mode img {
+  filter: var(--cardSvg-color-selected-light);
+}
+
+#controls button.dark-mode {
+  filter: var(--cardSvg-color-selected-dark);
+}
+
+#timer span.dark-mode {
+  color: var(--timer-color-dark);
+}
+
+#sounds button.card-dark-mode input[type=range]{
+  -webkit-appearance: none;
+  width: 9rem;
+  height: .4rem;
+  border-radius: 5px;
+  background: var(--timer-color-dark);
+}
+
+#sounds button.card-dark-mode input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--timer-color-dark);
+}
+
+/* Mobile */
+
+@media(max-width: 800px) {
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+    gap: 5rem;
+    width: 40rem;
+    height: 100rem;
+  }
+
+  .colorMode.light {
+    position: absolute;
+    z-index: 1;
+    top: 4rem;
+    right: 4rem;
+  }
+
+  .colorMode.dark {
+    position: absolute;
+    z-index: 1;
+    top: 4.4rem;
+    right: 4rem;
+  }
+
+}

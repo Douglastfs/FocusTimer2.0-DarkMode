@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temporizador estio pomodoro 2.0">
+
+  <title>Pomodoro Timer 2.0</title>
+
+  <link rel="shortcut icon" href="favicon.png" type="image/x-png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+  <main>
+
+      <button class="colorMode light"><img src="svg/sunLightMode.svg" alt="Botão light mode"></button>
+      <button class="colorMode dark hide"><img src="svg/moonDarkMode.svg" alt="Botão dark mode"></button>
+
+    <div id="controler">
+      <div id="timer">
+        <span class="minutes">25</span>
+        <span class="twoPoints">:</span>
+        <span class="seconds">00</span>
+      </div>
+
+        <div id="controls">
+          <button class="play"><img src="./svg/btnPlay.svg" alt="Botão play"></button>
+          <button class="pause hide"><img src="./svg/btnPause.svg" alt="Botão pause"></button>
+          <button class="stop"><img src="./svg/btnStop.svg" alt="Botão Stop"></button>
+          <button class="increment"><img src="./svg/btnIncrement.svg" alt="Botão de incrementar 5 minutos"></button>
+          <button class="decrement"><img src="./svg/btnDecrement.svg" alt="Botão de decrementar 5 minutos"></button>
+        </div>
+    </div>
+
+    <div id="sounds">
+      <button class="card forestSound">
+        <img class="forestBtn" src="./svg/forestSound.svg" alt="Botão som de floresta">
+        <input type="range" id="forestVolume" min="0" max="1" step="any">
+      </button>
+      <button class="card rainSound">
+        <img class="rainBtn" src="./svg/rainSound.svg" alt="Botão som de chuva">
+        <input type="range" id="rainVolume" min="0" max="1" step="any">
+      </button>
+      <button class="card coffeSound">
+        <img class="coffeBtn" src="./svg/coffeSound.svg" alt="Botão som de cafeteria">
+        <input type="range" id="coffeVolume" min="0" max="1" step="any">
+      </button>
+      <button class="card fireplaceSound">
+        <img class="fireplaceBtn" src="./svg/fireplaceSound.svg" alt="Botão som de lareira">
+        <input type="range" id="fireplaceVolume" min="0" max="1" step="any">
+      </button>
+    </div>
+  </main>
+
+  <script src="./js/index.js" type="module"></script>
+
+</body>
+</html>
