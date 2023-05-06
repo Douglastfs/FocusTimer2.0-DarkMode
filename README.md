@@ -1,20 +1,19 @@
-# FocusTimer2.0-DarkMode
+# FocusTimer2.0 - DarkMode
 
-Cada card que se encontra do lado direito, quando selecionado, muda de cor e emite um som diferente.
-O volume é controlado pelo slider que está embaixo de cada ícone.
+Projeto 9 do curso explorer da Rocketseat: Stage 05.
 
-Funcionalidades dos botões:
-Play : aciona o timer.
-Pause : Para o time.
-Stop : Reseta o timer.
-+ : aumenta em mais 5 minutos o tempo do timer;
-- : diminui em 5 minutos o tempo do timer.
+Nesse projeto foi feito a atualização do temporizador estilo Pomodoro(projeto 8).
 
-Funcionalidade do botão no canto superior direito:
-Alternar entre o Dark Mode e o Light Mode.
+Foi adicionado um botão no topo da página, lateral direita que aciona o Dark ou Light Mode.
+Além disso foi adicionado sliders nos cards de sons para alterar os volumes.
 
-![image](https://user-images.githubusercontent.com/105442514/230758013-6d967494-0ec9-4e64-b7c5-c04a1c83292d.png)
-
-
-Nesse link você irá encontrar o layout do FocusTimer.
+## Figma Layout
 https://www.figma.com/file/4NlY0oum4QkWg6Jw7GqcxP/Stage-05---Dark-Mode-FocusTimer-(Copy)?node-id=0-1&t=WPYTLgXQH1yQAZ8T-0
+
+## Deploy
+https://douglastfs.github.io/rocketseat-explorer-stage05-FocusTimer2.0-DarkMode/
+
+
+
+https://user-images.githubusercontent.com/105442514/236650778-ce493521-64e3-4086-bd7c-ffb332a90072.mp4
+
